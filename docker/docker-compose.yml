@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+
+# ------> adminer ------>
+    adminer_bsbxbz4tcjogz6vyp:
+        container_name: adminer_bsbxbz4tcjogz6vyp
+        image: adminer:latest
+        restart: always
+        environment:
+            ADMINER_PLUGINS: tables-filter tinymce
+            ADMINER_DESIGN: pepa-linha
+        ports:
+            - 8081:8080
+# <------ adminer <------
+
+# ------> mariadb ------>
+    mariadb_bsbxbz4tcjogz6vyq:
+        container_name: mariadb_bsbxbz4tcjogz6vyq
+        image: mariadb:10.3.7
+        restart: always
+        ports:
+            - 3306:3306
+        volumes:
+            - .././database/mon_site:/var/lib/mysql
+        environment:
+            MYSQL_DATABASE: skyflow
+            MYSQL_USER: skyflow
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root
+# <------ mariadb <------

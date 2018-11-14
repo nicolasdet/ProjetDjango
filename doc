@@ -1,0 +1,28 @@
+/*---------------- INIT ENV & DJANGO  --------------------*/
+
+$ python3.6 -m venv env_monProjet       (unique)
+$ source env_monProjet/bin/activate
+
+* crée un projet *
+
+$ django-admin startproject mysite       (unique)   Un projet
+$ cd ./
+$ python manage.py startapp polls        (multiple) plusieurs app , un peut comme des bundle
+
+/*--------------- DATABASE & MIGRATION  ---------------------*/
+
+$ pip install mysql-python
+$ python manage.py migrate
+
+faire une migration spécial à une app
+$ python manage.py makemigrations polls
+
+voir la migration :
+$ python manage.py sqlmigrate polls 0001
+
+shell python
+$ python manage.py shell
+
+
+/*---------------- ADMIN SUPER USER  --------------------*/
+
