@@ -1,3 +1,4 @@
+
 /*---------------- INIT ENV & DJANGO  --------------------*/
 
 $ python3.6 -m venv env_monProjet       (unique)
@@ -8,6 +9,9 @@ $ source env_monProjet/bin/activate
 $ django-admin startproject mysite       (unique)   Un projet
 $ cd ./
 $ python manage.py startapp polls        (multiple) plusieurs app , un peut comme des bundle
+
+## dev serve 
+
 
 /*--------------- DATABASE & MIGRATION  ---------------------*/
 
@@ -26,3 +30,8 @@ $ python manage.py shell
 
 /*---------------- ADMIN SUPER USER  --------------------*/
 
+$ python manage.py createsuperuser
+
+Username: 		root
+Email address:  root@root.com
+pass: 			root
